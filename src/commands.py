@@ -6,13 +6,10 @@ class commands(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def ping(self, ctx):
-        await ctx.send('pong')
-
-    @commands.command()
     async def meme(self, ctx):
         result = requests.get("https://meme-api.herokuapp.com/gimme").json()
         await ctx.send(result["url"])
+
 
 async def setup(bot):
     await bot.add_cog(commands(bot))
