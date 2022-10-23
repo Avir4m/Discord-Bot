@@ -16,7 +16,9 @@ async def on_ready():
 
 async def main():
     async with bot:
-        await bot.load_extension('commands') # loads extension commands
+        # loads extension commands
+        await bot.load_extension('commands')
+        await bot.load_extension('voice')
         await bot.start(get_token()) # starts the server
 
 asyncio.run(main()) # starts main
