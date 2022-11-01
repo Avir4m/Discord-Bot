@@ -14,5 +14,13 @@ class commands(commands.Cog):
         embed.add_field(name="Original Post", value=result["postLink"], inline=True)
         await ctx.send(embed=embed)
 
+    @commands.command()
+    async def reverse(self, ctx, arg):
+        number = int(arg)
+        first_digit = int(number / 10)
+        second_digit = number % 10 * 10
+        await ctx.send(first_digit + second_digit)
+        
+
 async def setup(bot):
     await bot.add_cog(commands(bot))
