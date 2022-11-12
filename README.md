@@ -11,8 +11,6 @@ Command prefix is ```.```
 
 - ```meme``` Sends random meme.
 
-- ```reverse (number)``` To reverse a number, takes number
-
 - ```math``` Sends random expression to solve.
 
 <br>

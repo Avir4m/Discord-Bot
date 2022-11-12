@@ -12,6 +12,12 @@ discord.utils.setup_logging() # Enables logging
 @bot.event
 async def on_ready():
     print(f'Logged in as: {bot.user.name} - Version: {discord.__version__}')
+    try:
+        synced = await bot.tree.sync()
+        print(f"Synced {len(synced)} command(s)")
+    except Exception as e:
+        print(e)
+
 
 
 async def main():
